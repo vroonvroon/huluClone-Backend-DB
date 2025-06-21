@@ -14,11 +14,16 @@ const {
 
 const connectDb = async () => {
       try {
+         console.log("🧪 Debug - MongoDB Connection Info:");
+         console.log("MONGO_HOST:", MONGO_HOST);
+         console.log("MONGO_USER:", MONGO_USER);
+         console.log("MONGO_PASSWORD:", MONGO_PASSWORD);
+         console.log("MONGO_DB:", MONGO_DB);
          console.log("Connecting with URI:", URI);
          await mongoose.connect(URI);
          console.log("Connected to the database");
       } catch (err) {
-         console.log("There was an issue connecting to the database", err.message);
+         // console.log("There was an issue connecting to the database", err.message);
          console.log("DB Connection failed:", err);
          process.exit(0);
       }
