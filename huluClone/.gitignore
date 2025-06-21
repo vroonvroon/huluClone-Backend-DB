@@ -22,8 +22,6 @@ node_modules/**
 dist
 dist-ssr
 *.local
-package.json
-package-lock.json
 
 # Editor directories and files
 .vscode/*
@@ -37,11 +35,3 @@ package-lock.json
 *.sw?
 LoginCard/
 validations/
-Pages/
-public
-src/
-docker-compose.yml
-Dockerfile
-index.html
-vite.config.js
-.eslintrc.cjs
