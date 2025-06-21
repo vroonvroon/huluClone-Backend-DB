@@ -14,10 +14,12 @@ const {
 
 const connectDb = async () => {
       try {
+         console.log("Connecting with URI:", URI);
          await mongoose.connect(URI);
          console.log("Connected to the database");
       } catch (err) {
-         console.log("There was an issue connecting to the database", + err);
+         console.log("There was an issue connecting to the database", err.message);
+         console.log("DB Connection failed:", err);
          process.exit(0);
       }
 }
