@@ -1,5 +1,16 @@
 const mongoose = require("mongoose");
-const URI = 'mongodb://localhost:27017/huluClone'
+// const URI = 'mongodb://localhost:27017/huluClone' // FOR DEV 
+
+// Parse env vars
+const {
+   MONGO_HOST,
+   MONGO_USER,
+   MONGO_PASSWORD,
+   MONGO_DB
+ } = process.env;
+ 
+ const URI = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}:27017/${MONGO_DB}?authSource=admin`;
+
 
 const connectDb = async () => {
       try {
