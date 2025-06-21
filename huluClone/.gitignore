@@ -17,7 +17,7 @@ validations/**
 README.node_modules
 
 # node_modules dir
-node_modules/**
+node_modules/
 
 dist
 dist-ssr
@@ -33,5 +33,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-LoginCard/
-validations/
